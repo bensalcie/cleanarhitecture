@@ -1,16 +1,19 @@
 # cleanarhitecture
 
-A new Flutter project.
+The Secret to Maintainable Apps
 
-## Getting Started
+## TDD Clean Architecture
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+This is where we can employ clean architecture and test driven development. As proposed by our friendly Uncle Bob, we should all strive to separate code into independent layers and depend on abstractions instead of concrete implementations.
+How can such an independence be achieved? Although we're getting ahead of ourselves a bit, on the layered "onion" image below, the horizontal arrows ---> represent dependency flow. For example, Entities do not depend on anything, Use Cases depend only on Entities etc.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- We will build an app for getting interesting facts about numbers - a Number Trivia App!
+- To make things clear and Flutter-specific, let me introduce you to Reso Coder's Flutter Clean Architecture Proposal™ to demonstrate something
+
+Arhitecture proposal
+
+
+Every "feature" of the app, like getting some interesting trivia about a number, will be divided into 3 layers - presentation, domain and data. The app we're building will have only one feature.
